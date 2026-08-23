@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    margin: 0;
+    padding: 0;
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'IBM Plex Sans', sans-serif;
+    --fundo-principal: #380545;
+    --fundo-medio: #5f376a;
+    --fundo-claro: #87698f;
+    --texto-principal: #d9d9d9;
+    --texto-secundario: #a9a9a9;
+    --destaques: #d4c51b;
+    --fundos-destaque: #a39710;
+    --navbar-destaque: #4319ff;
+}
+
+body{
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    margin: 0;
+    padding: 0;
+}
+
+#menu_Fixo {
+    position: fixed;
+    top: 10.5vh;
+    right: 64px;
+}
+
+.menu_Fixo_Nav {
+    display: flex;
+    list-style: none;
+}
+
+.menu_Fixo_Nav a {
+    margin: 16px;
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-family: var(--fonte-texto);
+    font-weight: bold;
+}
+
+.hero_Section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background: radial-gradient(
+    circle,
+    var(--fundo-claro) 0%,
+    var(--fundo-medio) 23%,
+    var(--fundo-principal) 65%
+);
+}
+
+.logo_Hero_Section {
+    width: 198px;
+    margin-top: 8vh;
+    margin-left: 32px;
+}
+
+.language_Buttons_Container {
+    margin: 2.5vh 64px 0 0;
+}
+
+.language_Buttons_Container a {
+    margin: 0 16px;
+    width: 40px;
+    height: 40px;
+}
+
+.img_Language_Buttons {
+    width: 32px;    
+}
+
+/* Colocar condição para mudança de idioma */
+#pt_br_Button {
+    display: inline-flex;
+    border: 4px solid var(--navbar-destaque);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.hero {
+    align-self: center;
+}
+
+.hero_Title {
+    font-family: var(--fonte-titulo);
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.hero_Sub {
+    font-family: var(--fonte-texto);
+    font-size: 24px;
+    color: var(--destaques);
+    font-weight: normal;
+}
+
+.hero_Section_Container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links_Container {
+    margin: 0 0 72px 32px;
+    height: 32px;
+}
+
+.links_Container a {
+    margin: 0 3.3vw 0 0;
+}
+
+.scroll_Container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px 72px 0;
+
+}
+
+.scroll_Container_Texto {
+    color: var(--texto-secundario);
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotate(90deg);
+    margin-bottom: 8px;
+}
+
+.rodape {
+    align-items: flex-end;
+}
