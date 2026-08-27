@@ -26,17 +26,33 @@ body{
     position: fixed;
     top: 10.5vh;
     right: 64px;
+    z-index: 10;
+    transition: top 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
+}
+
+#menu_Fixo.menu--compacto {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 64px 48px 12px;
+    background-color: var(--fundo-principal);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
 }
 
 .menu_Fixo_Nav {
     display: flex;
     list-style: none;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
 }
 
 .menu_Fixo_Nav a {
     margin: 16px;
     text-decoration: none;
-    color: var(--texto-principal);
+    color: var(--texto-secundario);
     font-family: var(--fonte-texto);
     font-weight: bold;
 }
@@ -53,6 +69,10 @@ body{
     var(--fundo-medio) 23%,
     var(--fundo-principal) 65%
 );
+}
+
+section {
+    scroll-margin-top: 96px;
 }
 
 .logo_Hero_Section {
