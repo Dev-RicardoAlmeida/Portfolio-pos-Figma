@@ -1,3 +1,4 @@
+import './nav.js';
 const menuFixo = document.querySelector('#menu_Fixo');
 
 function atualizarMenu() {
