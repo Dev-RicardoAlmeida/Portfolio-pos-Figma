@@ -1,29 +1,24 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
-const observer = new IntersectionObserver((entries) => {
+function updateActiveLink() {
+    const scrollPosition = window.scrollY + 160;
+    let currentSection = sections[0];
 
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-            });
-
-            const activeLink = document.querySelector(
-                `nav a[href="#${entry.target.id}"]`
-            );
-
-            activeLink.classList.add("active");
+    sections.forEach(section => {
+        if (section.offsetTop <= scrollPosition) {
+            currentSection = section;
         }
-
     });
 
-}, {
-    threshold: 0.5
-});
+    navLinks.forEach(link => {
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${currentSection.id}`
+        );
+    });
+}
 
-sections.forEach(section => {
-    observer.observe(section);
-});
+window.addEventListener("scroll", updateActiveLink, { passive: true });
+window.addEventListener("resize", updateActiveLink);
+updateActiveLink();

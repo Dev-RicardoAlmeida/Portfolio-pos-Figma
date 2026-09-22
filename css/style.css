@@ -178,6 +178,7 @@ section {
     font-family: var(--fonte-titulo);
     font-size: 36px;
     font-weight: bold;
+    margin-left: 128px;
 }
 
 .paragrafos_Sections {
@@ -207,4 +208,67 @@ section {
     color: var(--texto-principal);
     font-family: var(--fonte-texto);
     font-size: 16px;
+}
+
+.servicos_Section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_Paragrafos_Sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 128px;
+}
+
+.paragrafos_Sections {
+    color: var(--texto-secundario);
+    width: 480px;
+}
+
+.destaque_Sections_Container {
+    width: 33vw;
+    margin-left: 33vw;
+}
+
+.destaque_Sections_Item {
+    width: 150px;
+}
+
+.destaque_Sections_Titulo {
+    margin: 0;
+}
+
+.destaque_Sections_Texto {
+    margin-top: 4px;
+}
+
+.cards_Servicos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 8vw;
+}
+
+.card {
+    background-color: var(--texto-principal);
+    color: var(--fundo-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 256px;
+    height: 320px;
+    margin-right: 68px;
+    border-radius: 8px;
+    font-family: var(--fonte-texto);
+    padding-top: 32px;
+    min-width: 200px;
+}
+
+.card_Title {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin: 12px 0 24px 0;
 }
