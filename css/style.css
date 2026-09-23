@@ -179,6 +179,7 @@ section {
     font-size: 36px;
     font-weight: bold;
     margin-left: 128px;
+    width: 40vw;
 }
 
 .paragrafos_Sections {
@@ -249,6 +250,7 @@ section {
     flex-direction: row;
     justify-content: space-between;
     margin: 0 8vw;
+    padding: 0;
 }
 
 .card {
@@ -259,7 +261,6 @@ section {
     align-items: center;
     width: 256px;
     height: 320px;
-    margin-right: 68px;
     border-radius: 8px;
     font-family: var(--fonte-texto);
     padding-top: 32px;
@@ -271,4 +272,121 @@ section {
     font-weight: normal;
     text-align: center;
     margin: 12px 0 24px 0;
+}
+
+.card_List {
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.banner_Servicos {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 88px 8vw -40px 8vw;
+    padding: 0;
+}
+
+.banner_Servicos_Item {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--fundo-claro);
+    width: 360px;
+    height: 88px;
+    border: var(--texto-secundario) 2px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_Destaque {
+    background-color: var(--fundos-destaque);
+}
+
+.banner_Servicos_Title {
+    margin: 0 0 0 16px;
+    color: var(--texto-principal);
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    font-size: 20px;
+    width: 60%;
+}
+
+.carrossel_Skills {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 150px 0;
+    background-color: var(--fundo-medio);
+}
+
+.carrossel_Skills_List {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    gap: 8vw;
+    list-style: none;
+    width: max-content;
+    flex-shrink: 0;
+    animation: infinite linear 24s carrossel_Skills_Animacao;
+}
+
+@keyframes carrossel_Skills_Animacao {
+    to {
+        transform: translateX(calc(-50% - 4vw));
+    }
+}
+
+.carrossel_Skills_Item {
+    margin: 0;
+}
+
+.container_Projetos_Section {
+    display: flex;
+    flex-direction: row;
+    gap: 148px;
+    margin: 158px 0 160px 0;
+    align-items: center;
+}
+
+.carrossel_Projetos_Section {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0 0 20vh 8vw ;
+    gap: 48px;
+}
+
+.carrossel_Projetos_Item {
+    margin: 0;
+    padding: 0;
+}
+
+.carrossel_Projetos_Item img {
+    width: 440px;
+    box-shadow: 0 6px 10px -6px var(--texto-principal);
+}
+
+.carrossel_Projetos_Title {
+    color: var(--texto-principal);
+    font-family: var(--fonte-texto);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carrossel_Projetos_Texto {
+    color: var(--texto-principal);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    font-weight: normal;
 }
