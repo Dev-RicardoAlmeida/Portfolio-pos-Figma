@@ -390,3 +390,30 @@ section {
     font-size: 16px;
     font-weight: normal;
 }
+
+.container_Sobre_Section {
+    display: flex;
+    align-items: center;
+}
+
+.paragrafo_Sobre {
+    font-weight: bold;
+    margin: 0 128px;
+}
+
+.container_Foto_Sobre_Section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--fundos-destaque);
+}
+
+.foto_Sobre_Section {
+    width: 320px;
+    height: fit-content;
+    border-radius: 8px;
+    border: 1px solid var(--fundo-claro);
+    position: relative;
+}
