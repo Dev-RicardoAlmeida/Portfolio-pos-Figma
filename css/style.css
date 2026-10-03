@@ -15,6 +15,10 @@
     --navbar-destaque: #4319ff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
@@ -362,14 +366,33 @@ section {
 .carrossel_Projetos_Section {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin: 0 0 20vh 8vw ;
     gap: 48px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.carrossel_Projetos_Section_Navegadores {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 136px 32px 0;
+    gap: 24px;
+}
+
+.carrossel_Projetos_Section_Navegadores_Botao {
+    background: none;
+    border: none;
+    cursor: pointer;
+    
 }
 
 .carrossel_Projetos_Item {
     margin: 0;
     padding: 0;
+    flex: 0 0 440px;
 }
 
 .carrossel_Projetos_Item img {

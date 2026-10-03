@@ -1,4 +1,6 @@
 import './nav.js';
+import './carrossel.js';
+
 const menuFixo = document.querySelector('#menu_Fixo');
 
 function atualizarMenu() {
