@@ -26,6 +26,36 @@ body{
     padding: 0;
 }
 
+body.idioma-carregando::before,
+body.idioma-carregando::after {
+    content: "";
+    position: fixed;
+    z-index: 10000;
+}
+
+body.idioma-carregando::before {
+    inset: 0;
+    background: rgb(0 0 0 / 28%);
+}
+
+body.idioma-carregando::after {
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgb(255 255 255 / 35%);
+    border-top-color: var(--destaques);
+    border-radius: 50%;
+    animation: idioma-carregando-giro 700ms linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes idioma-carregando-giro {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 #menu_Fixo {
     position: fixed;
     top: 10.5vh;
@@ -119,8 +149,7 @@ section {
     width: 32px;    
 }
 
-/* Colocar condição para mudança de idioma */
-#pt_br_Button {
+.language_Buttons_Item.idioma-selecionado {
     display: inline-flex;
     border: 4px solid var(--navbar-destaque);
     border-radius: 8px;
@@ -142,6 +171,12 @@ section {
     font-size: 24px;
     color: var(--destaques);
     font-weight: normal;
+}
+
+.hero_Sub_Container{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .hero_Section_Container {

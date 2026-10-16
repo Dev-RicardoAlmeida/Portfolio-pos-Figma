@@ -1,5 +1,6 @@
 import './nav.js';
 import './carrossel.js';
+import './language.js';
 
 const menuFixo = document.querySelector('#menu_Fixo');
 
